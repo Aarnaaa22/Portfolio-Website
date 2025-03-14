@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RNA's Personal Website</title>
+    <title>AARNA's Personal Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Smooth Scroll */
@@ -62,8 +62,8 @@
         /* Home Section with Animations */
         #home {
             height: 100vh;
-            background-color: #4c4aff;
-            color: white;
+            background-color: white;
+            color: #7B2CBF;
             text-align: center;
             display: flex;
             justify-content: center;
@@ -74,89 +74,19 @@
         #home h2 {
             font-size: 3rem;
             font-weight: bold;
-            animation: fadeIn 2s ease-in-out;
+            animation: rotateText 3s infinite alternate;
         }
 
-        #home p {
-            font-size: 1.25rem;
-            margin-top: 1rem;
-            animation: fadeIn 2.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
+        @keyframes rotateText {
             0% {
-                opacity: 0;
-                transform: translateY(20px);
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
             }
             100% {
-                opacity: 1;
-                transform: translateY(0);
+                transform: rotate(0deg);
             }
-        }
-
-        /* Gallery Hover Effects */
-        .gallery img {
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.1);
-            opacity: 0.8;
-        }
-
-        /* About Section Styling */
-        #about {
-            padding: 60px 20px;
-            background-color: white;
-            color: #333;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #about h2 {
-            font-size: 2.5rem;
-            color: #7B2CBF;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        #about p {
-            font-size: 1.125rem;
-            line-height: 1.6;
-            margin-top: 15px;
-            color: #555;
-        }
-
-        /* Fun Form Styling */
-        .form-input {
-            border: 2px solid #9B4DCA;
-            border-radius: 10px;
-            padding: 15px;
-            width: 100%;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus {
-            border-color: #7B2CBF;
-            transform: scale(1.05);
-        }
-
-        button {
-            background-color: #7B2CBF;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1rem;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #9B4DCA;
-            transform: scale(1.1);
         }
     </style>
 </head>
@@ -164,7 +94,7 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <h1>RNA's Space</h1>
+        <h1>AARNA's Space</h1>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -173,7 +103,7 @@
         </ul>
     </nav>
 
-    <!-- Home Section with Animations -->
+    <!-- Home Section with Rotating Animation -->
     <section id="home">
         <div>
             <h2>Welcome to My World</h2>
@@ -185,13 +115,7 @@
     <section id="about">
         <h2>About Me</h2>
         <p class="text-lg text-gray-700 leading-relaxed">
-            Hello! I'm RNA, an ambivert who thrives between social gatherings and quiet moments of reflection. I find balance in embracing both sides of my personality, whether I'm out dancing to my favorite tunes or enjoying a peaceful evening at home. Dancing is a passion that brings joy and energy into my life, and there's nothing quite like losing myself in the rhythm of music. 
-        </p>
-        <p class="text-lg text-gray-700 leading-relaxed mt-4">
-            When I'm not dancing, you’ll likely find me listening to music – it’s my go-to escape, a way to express emotions and set the mood for my day. I also dedicate part of my free time to helping stray animals. Feeding and taking care of stray cats and dogs is one of the ways I try to make a positive impact in my community.
-        </p>
-        <p class="text-lg text-gray-700 leading-relaxed mt-4">
-            This website is an extension of my journey – a space where I share bits and pieces of my life, my passions, and the things that bring me joy. I'm always open to new experiences and meeting like-minded people who share similar interests.
+            Hello! I'm AARNA CHOPDEKAR from COMPS-C, an ambivert who thrives between social gatherings and quiet moments of reflection. I find balance in embracing both sides of my personality, whether I'm out dancing to my favorite tunes or enjoying a peaceful evening at home. Dancing is a passion that brings joy and energy into my life, and there's nothing quite like losing myself in the rhythm of music. 
         </p>
     </section>
 
@@ -205,8 +129,8 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+       <!-- Contact Section -->
+       <section id="contact">
         <h2 class="section-title">Contact Me</h2>
         <form>
             <input type="text" class="form-input" placeholder="Your Name">
