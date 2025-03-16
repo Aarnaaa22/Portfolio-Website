@@ -306,7 +306,7 @@ function initSmoothScroll() {
     });
 }
 
-// Animate elements on scroll
+
 function animateOnScroll() {
     const elements = document.querySelectorAll('.about-content, .gallery-grid, .contact-content');
     
