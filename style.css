@@ -1,13 +1,60 @@
-/* Global Styles */
+/* Make sure these CSS variables are properly defined in your existing CSS */
 :root {
     --primary-color: #9B4DCA;
     --secondary-color: #7B2CBF;
     --dark-purple: #5A189A;
     --light-purple: #E0AAFF;
-    --bg-color: #f8f7fa;
-    --text-color: #333;
     --white: #ffffff;
     --transition: all 0.3s ease;
+    --theme-toggle:#7B2CBF;
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --header-bg: #1e1e1e;
+    --card-bg: #1e1e1e;
+    --contact-card-bg: #252525;
+    --gallery-bg: #1a1a1a;
+    --form-bg: #2a2a2a;
+    --form-border: #444;
+    --white: #f0f0f0;
+    --tp:#333;
+}
+
+.light-mode {
+    --bg-color: #f8f7fa;
+    --text-color: #333;
+    --header-bg: #fff;
+    --card-bg: #fff;
+    --contact-card-bg: #f9f6ff;
+    --gallery-bg: #f9f6ff;
+    --form-bg: #f9f6ff;
+    --form-border: #eee;
+    --white: #ffffff;
+    --tp:#f0f0f0;
+}
+
+/* Fix for theme toggle button */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--theme-toggle);
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(128, 128, 128, 0.2);
 }
 
 * {
@@ -67,7 +114,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: var(--white);
+    background-color: var(--header-bg);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -124,6 +171,13 @@ header .container {
     width: 100%;
 }
 
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -145,7 +199,7 @@ header .container {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: var(--tp);
     overflow: hidden;
 }
 
@@ -196,7 +250,7 @@ header .container {
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.7),
                      0 0 20px rgba(155, 77, 202, 0.7),
                      0 0 30px rgba(123, 44, 191, 0.7);
     }
@@ -238,7 +292,7 @@ header .container {
 
 /* About Section */
 #about {
-    background-color: var(--white);
+    background-color: var(--card-bg);
 }
 
 .about-content {
@@ -301,7 +355,6 @@ header .container {
 .about-text p {
     margin-bottom: 20px;
     font-size: 1.1rem;
-    color: #555;
 }
 
 .skills {
@@ -310,7 +363,7 @@ header .container {
 
 .skills h3 {
     margin-bottom: 20px;
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-size: 1.5rem;
 }
 
@@ -341,7 +394,7 @@ header .container {
 
 /* Gallery Section */
 #gallery {
-    background-color: #f9f6ff;
+    background-color: var(--gallery-bg);
 }
 
 .gallery-filter {
@@ -467,7 +520,7 @@ header .container {
 
 /* Contact Section */
 #contact {
-    background-color: var(--white);
+    background-color: var(--card-bg);
 }
 
 .contact-content {
@@ -491,7 +544,7 @@ header .container {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    background-color: #f9f6ff;
+    background-color: var(--contact-card-bg);
     transition: var(--transition);
 }
 
@@ -524,10 +577,11 @@ header .container {
 .form-group textarea {
     width: 100%;
     padding: 15px;
-    border: 2px solid #eee;
+    border: 2px solid var(--form-border);
     border-radius: 10px;
-    background-color: #f9f6ff;
+    background-color: var(--form-bg);
     font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
     transition: var(--transition);
 }
 
@@ -678,7 +732,7 @@ footer {
         right: -100%;
         width: 80%;
         height: 100vh;
-        background-color: var(--white);
+        background-color: var(--header-bg);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -714,6 +768,10 @@ footer {
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
+    
+    .header-controls {
+        z-index: 1001;
+    }
 }
 
 @media (max-width: 576px) {
@@ -740,116 +798,5 @@ footer {
     
     .modal-content {
         max-width: 95%;
-    }
-}
-:root {
-    --primary-color: #9B4DCA;
-    --secondary-color: #7B2CBF;
-    --dark-purple: #5A189A;
-    --light-purple: #E0AAFF;
-    --bg-color: #f8f7fa;
-    --text-color: #333;
-    --white: #ffffff;
-    --transition: all 0.3s ease;
-    --header-bg: var(--white);
-    --card-bg: var(--white);
-    --contact-card-bg: #f9f6ff;
-    --gallery-bg: #f9f6ff;
-    --form-bg: #f9f6ff;
-    --form-border: #eee;
-}
-
-/* Dark Mode Variables */
-html.dark-mode {
-    --bg-color: #121212;
-    --text-color: #f0f0f0;
-    --header-bg: #1e1e1e;
-    --card-bg: #1e1e1e;
-    --contact-card-bg: #252525;
-    --gallery-bg: #1a1a1a;
-    --form-bg: #2a2a2a;
-    --form-border: #444;
-}
-
-/* Apply background/text colors */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-header {
-    background-color: var(--header-bg);
-}
-
-.header-controls {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.theme-toggle-btn {
-    background: none;
-    border: none;
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-}
-
-.theme-toggle-btn:hover {
-    background-color: rgba(155, 77, 202, 0.1);
-}
-
-/* Section background adjustments */
-#about {
-    background-color: var(--card-bg);
-}
-
-#gallery {
-    background-color: var(--gallery-bg);
-}
-
-#contact {
-    background-color: var(--card-bg);
-}
-
-/* Form styles for dark mode */
-.contact-item {
-    background-color: var(--contact-card-bg);
-}
-
-.form-group input,
-.form-group textarea {
-    background-color: var(--form-bg);
-    border-color: var(--form-border);
-    color: var(--text-color);
-}
-
-/* Adjust text colors */
-.section-title,
-.about-text p,
-.skills h3 {
-    color: var(--text-color);
-}
-
-/* Navigation link adjustments */
-.nav-link {
-    color: var(--text-color);
-}
-
-/* Additional adjustments for mobile menu */
-@media (max-width: 768px) {
-    nav {
-        background-color: var(--header-bg);
-    }
-    
-    .header-controls {
-        z-index: 1001;
     }
 }

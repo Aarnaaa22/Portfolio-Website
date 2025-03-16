@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Remove script tag from here -->
 </head>
 <body>
     <!-- Header with Navigation -->
@@ -16,7 +17,7 @@
                 <h1>AARNA's Space</h1>
             </div>
             <div class="header-controls">
-                <button id="theme-toggle" class="theme-toggle-btn">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
                     <i class="fas fa-moon"></i>
                 </button>
                 <div class="hamburger-menu">
@@ -59,10 +60,10 @@
                 <div class="profile-pic">
                     <img id="profile-image" src="Aarna profile.jfif" alt="AARNA CHOPDEKAR">
                     <div class="social-links">
-                        <a href="https://www.instagram.com/aarnachopdekar?igsh=MjJkc3Ixb3hvNXRp&utm_source=qr" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="https://snapchat.com/t/PNf7yspR" class="social-icon"><i class="fab fa-snapchat"></i></a>
-                        <a href="https://in.linkedin.com/in/aarna-9th-2524361b3" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/aarnachopdekar?igsh=MjJkc3Ixb3hvNXRp&utm_source=qr" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://snapchat.com/t/PNf7yspR" class="social-icon" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
+                        <a href="https://in.linkedin.com/in/aarna-9th-2524361b3" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="about-text">
@@ -146,7 +147,7 @@
         <!-- Gallery Modal -->
         <div id="gallery-modal" class="modal">
             <span class="close-modal">&times;</span>
-            <img class="modal-content" id="modal-img">
+            <img class="modal-content" id="modal-img" alt="Enlarged gallery image">
             <div id="caption"></div>
         </div>
     </section>
@@ -207,10 +208,10 @@
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-social">
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
             <div class="scroll-top">
@@ -219,6 +220,7 @@
         </div>
     </footer>
 
+    <!-- Important: Script tag should be at the end of the body -->
     <script src="script.js"></script>
 </body>
 </html>
