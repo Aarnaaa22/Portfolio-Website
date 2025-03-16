@@ -742,3 +742,114 @@ footer {
         max-width: 95%;
     }
 }
+:root {
+    --primary-color: #9B4DCA;
+    --secondary-color: #7B2CBF;
+    --dark-purple: #5A189A;
+    --light-purple: #E0AAFF;
+    --bg-color: #f8f7fa;
+    --text-color: #333;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+    --header-bg: var(--white);
+    --card-bg: var(--white);
+    --contact-card-bg: #f9f6ff;
+    --gallery-bg: #f9f6ff;
+    --form-bg: #f9f6ff;
+    --form-border: #eee;
+}
+
+/* Dark Mode Variables */
+html.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --header-bg: #1e1e1e;
+    --card-bg: #1e1e1e;
+    --contact-card-bg: #252525;
+    --gallery-bg: #1a1a1a;
+    --form-bg: #2a2a2a;
+    --form-border: #444;
+}
+
+/* Apply background/text colors */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg);
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(155, 77, 202, 0.1);
+}
+
+/* Section background adjustments */
+#about {
+    background-color: var(--card-bg);
+}
+
+#gallery {
+    background-color: var(--gallery-bg);
+}
+
+#contact {
+    background-color: var(--card-bg);
+}
+
+/* Form styles for dark mode */
+.contact-item {
+    background-color: var(--contact-card-bg);
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: var(--form-bg);
+    border-color: var(--form-border);
+    color: var(--text-color);
+}
+
+/* Adjust text colors */
+.section-title,
+.about-text p,
+.skills h3 {
+    color: var(--text-color);
+}
+
+/* Navigation link adjustments */
+.nav-link {
+    color: var(--text-color);
+}
+
+/* Additional adjustments for mobile menu */
+@media (max-width: 768px) {
+    nav {
+        background-color: var(--header-bg);
+    }
+    
+    .header-controls {
+        z-index: 1001;
+    }
+}

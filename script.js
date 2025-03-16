@@ -1,4 +1,38 @@
 // DOM Elements
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = themeToggleBtn.querySelector('i');
+const html = document.documentElement;
+
+// Check for saved user preference, if any
+const savedTheme = localStorage.getItem('theme');
+
+// Apply the saved theme or default to light
+if (savedTheme) {
+    html.classList.add(savedTheme + '-mode');
+    updateThemeIcon(savedTheme);
+}
+
+// Theme toggle functionality
+themeToggleBtn.addEventListener('click', () => {
+    if (html.classList.contains('dark-mode')) {
+        html.classList.remove('dark-mode');
+        html.classList.add('light-mode');
+        localStorage.setItem('theme', 'light');
+        updateThemeIcon('light');
+    } else {
+        html.classList.remove('light-mode');
+        html.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        updateThemeIcon('dark');
+    }
+});
+
+// Update the theme icon based on current theme
+function updateThemeIcon(theme) {
+    if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.
+        // DOM Elements
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const nav = document.querySelector("nav");
 const navLinks = document.querySelectorAll(".nav-link");
